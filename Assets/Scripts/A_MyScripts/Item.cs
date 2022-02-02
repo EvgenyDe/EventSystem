@@ -51,7 +51,8 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
         dragObject = this.gameObject;
         
-        //RaycastHit
+        RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition, new Vector3(0,0,1));
+        if(hit.collider) Debug.Log(this);
         
     }
 }
