@@ -36,9 +36,9 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler,IPointerExitHandle
         // {
         //     item.transform.SetParent(this.gameObject.transform,true);
         // }
-
+        if(item==null) _item.transform.localPosition =Vector3.zero;
         _item = item;
-        //Debug.Log(_item);
+       
     }
     
     public void OnPointerEnter(PointerEventData eventData)
@@ -48,6 +48,8 @@ public class SlotScript : MonoBehaviour, IPointerEnterHandler,IPointerExitHandle
         if (_item != null)
         {
             _item.transform.SetParent(this.gameObject.transform,true);
+            //_item.transform.SetParent(this.gameObject.transform,true);
+
         }
         
         
