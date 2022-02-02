@@ -51,5 +51,7 @@ public class Item : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoin
 
         dragObject = this.gameObject;
         
+        //RaycastHit
+        
     }
 }
